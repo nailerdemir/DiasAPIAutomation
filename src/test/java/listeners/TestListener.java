@@ -15,16 +15,14 @@ public class TestListener implements ITestListener {
                 
                 
                 
-                """ +
-                "========== Test Suite Başlıyor: {} ==========", context.getName());
+                """ +"========== Test Suite Başlıyor: {} ==========", context.getName());
     }
 
     @Override
     public void onFinish(ITestContext context) {
         logger.info("========== Test Suite Tamamlandı: {} ==========", context.getName());
-        logger.info("Başarılı: {}", context.getPassedTests().size());
-        logger.info("Başarısız: {}", context.getFailedTests().size());
-        logger.info("Atlanan: {}", context.getSkippedTests().size());
+        logger.info("Başarılı Test Sayısı: {}", context.getPassedTests().size());
+        logger.info("Başarısız Test Sayısı: {}", context.getFailedTests().size());
         logger.info("========== Test Koşum Sonu: {} ==========", context.getName());
     }
 

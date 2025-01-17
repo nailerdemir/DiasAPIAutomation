@@ -45,7 +45,7 @@ public class BookingSteps {
     }
 
     @Given("a booking with ID {string} exists")
-    public void a_booking_with_id_exists(String bookingId) {
+    public void aBookingWithIdExists(String bookingId) {
         logger.info("Rezervasyon ID'si kontrol ediliyor: " + bookingId);
         given()
                 .when()
@@ -56,9 +56,8 @@ public class BookingSteps {
     }
 
     @Given("the user has a valid authentication token")
-    public void the_user_has_a_valid_authentication_token() {
+    public void theUserHasAValidAuthenticationToken() {
         logger.info("Geçerli bir authentication token alınıyor...");
-        // Token alma işlemi burada gerçekleştirilir.
         authToken = given()
                 .contentType(ContentType.JSON)
                 .body("{\"username\": \"admin\", \"password\": \"password123\"}")
